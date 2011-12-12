@@ -347,9 +347,10 @@ static int __devinit ich7_lpc_probe(struct pci_dev *dev,
 	int status = 0;
 	u32 gc = 0;
 
-	//pci_enable_device(dev);
-	if (pci_enable_device(dev) < 0) {
-		printk(KERN_ERR "leds-ss4200: pci_enable_device failed\n");
+	status = pci_enable_device(dev);
+	if (status) {
+		dev_err(&dev->dev, "pci_enable_device failed\n");
+		return -EIO;
 	}
 
 	nas_gpio_pci_dev = dev;
