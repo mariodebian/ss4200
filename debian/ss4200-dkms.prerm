@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -e
+
+package=ss4200-dkms
+name=leds-ss4200
+
+version=`dpkg-query -W -f='${Version}' "$package" \
+        |rev|cut -d- -f2-|rev|cut -d':' -f2|tr -d "\n"`
+
+dkms remove -m "$name" -v "$version" --all || true
+
+
+#case "$1" in
+#        remove|purge)
+#                # Update initramfs
+#                /usr/sbin/update-initramfs -u
+#                ;;
+#esac
+
+#DEBHELPER#
+
+exit 0

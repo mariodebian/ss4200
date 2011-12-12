@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+package=ss4200-dkms
+name=leds-ss4200
+
+version=`dpkg-query -W -f='${Version}' "$package" \
+        |rev|cut -d- -f2-|rev|cut -d':' -f2|tr -d "\n"`
+
+isadded=`dkms status -m "$name" -v "$version"`
+
+if [ "x${isadded}" = "x" ] ; then
+        dkms add -m "$name" -v "$version"
+fi
+
+if [ "$1" = 'configure' ] ; then
+        dkms build -m "$name" -v "$version" && dkms install -m "$name" -v "$version" || true
+
+
+#        # Update initramfs
+#        /usr/sbin/update-initramfs -u
+
+fi
+
+#DEBHELPER#
+
+exit 0
+

@@ -1,0 +1,28 @@
+Format-Specification:
+ http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=454
+Upstream-Name: tp_smapi
+Upstream-Maintainer: JShem Multinymous <multinymous@gmail.com>
+Upstream-Source: http://tpctl.sourceforge.net/
+
+Files: *
+Copyright: © 2006-2009 Shem Multinymous  <multinymous@gmail.com>
+License: GPL-2+
+
+Files: tp_smapi.c
+Copyright: © 2006-2009 Shem Multinymous  <multinymous@gmail.com>
+             SMAPI access code based on the mwave driver by Mike Sullivan
+License: GPL-2+
+
+Files: hdaps.c
+Copyright: © 2005 Robert Love <rml@novell.com>
+Copyright: © 2005 Jesper Juhl <jesper.juhl@gmail.com>
+Copyright: © 2006-2009 Shem Multinymous  <multinymous@gmail.com>
+License: GPL-2
+
+Files: debian/*
+Copyright: © 2006-2009 Evgeni Golov <evgeni@debian.org>
+License: GPL-2+
+
+License: GPL-2 | GPL-2+
+ On Debian systems, the complete text of the GNU General Public License
+ Version 2 can be found in the /usr/share/common-licenses/GPL-2 file.

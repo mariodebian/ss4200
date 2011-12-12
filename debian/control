@@ -1,0 +1,15 @@
+Source: ss4200
+Section: kernel
+Priority: optional
+Maintainer: Mario Izquierdo (mariodebian) <mariodebian@gmail.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.9.1
+HomePage: http://ss4200.pbworks.com/w/page/5122743/Debian-Led
+
+Package: ss4200-dkms
+Architecture: all
+Depends: dkms (>= 1.95), ${misc:Depends}
+Description: Intel SS4200 NAS LEDS kernel module from Atheros official web
+ Intel SS4200 NAS LEDS kernel module from Atheros official web
+ .
+ This package contains the source to be built with dkms.
